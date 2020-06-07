@@ -177,7 +177,7 @@ class MultiplayerActivity : AppCompatActivity(), View.OnClickListener {
         roomModel.timestamp = TimeUtils.currentDateTime
         roomModel.roomId?.let {
             db.reference.child("APPS").child(Constants.GAME).child(Constants.GAMEROOMS).child(it).setValue(roomModel)
-                .addOnCompleteListener { }
+                    .addOnCompleteListener { }
         }
     }
 
@@ -211,7 +211,7 @@ class MultiplayerActivity : AppCompatActivity(), View.OnClickListener {
     private fun updateViews() {
         binding!!.displayTv.text = "Player $turn Turn"
         for (i in list.indices) {
-            if (matrix[i] == PLAYER1 ) list[i].setImageDrawable(getDrawable(R.drawable.ic_cross)) else if (matrix[i] == PLAYER2) list[i].setImageDrawable(getDrawable(R.drawable.ic_zero)) else if (matrix[i] == -1) {
+            if ((matrix[i]).toLong() == PLAYER1.toLong()) list[i].setImageDrawable(getDrawable(R.drawable.ic_cross)) else if (matrix[i] == PLAYER2.toLong()) list[i].setImageDrawable(getDrawable(R.drawable.ic_zero)) else if (matrix[i] == -1.toLong()) {
                 list[i].setImageDrawable(null
                 )
             }
