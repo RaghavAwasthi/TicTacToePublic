@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tic Tac Toe (Code with Community)</string>
+    <string name="title_activity_master">MasterActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="welcome_to_tic_tac_toe">Welcome to Tic Tac Toe</string>
+</resources>
